@@ -1,6 +1,6 @@
-# Номер посылки 35898329 - 12 окт 2020, 13:44:55
+# Номер успешной посылки 36138548 - 12 окт 2020, 23:15:24
 
-class Node(object):
+class Node:
 
     def __init__(self, value, next=None):
         self.value = value
@@ -16,12 +16,12 @@ def hasCycle(head):
     :type head: Node
     :return type: bool
     """
-    if not head:
-        return False
     hare, tortoise = head, head
-    while hare and hare.next:
+    while hare is not None and hare.next:
         hare = hare.next.next
         tortoise = tortoise.next
-        if hare == tortoise:
+        if hare is tortoise:
             return True
     return False
+
+
