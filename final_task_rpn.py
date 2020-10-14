@@ -1,6 +1,6 @@
-# Номер успешной посылки 36254397 13 окт 2020, 22:27:41
+# Номер успешной посылки 36300628 14 окт 2020, 14:38:13
 
-action = {
+ACTION = {
     '+': lambda x, y: x + y,
     '-': lambda x, y: x - y,
     '*': lambda x, y: x * y,
@@ -40,10 +40,9 @@ def calculator(input_string):
     """
 
     stack = Stack()
-    ops = action.keys()
-    symbols = input_string.split()
+    ops = ACTION.keys()
 
-    for symbol in symbols:
+    for symbol in input_string:
         try:
             symbol = float(symbol)
             stack.push(symbol)
@@ -57,13 +56,13 @@ def calculator(input_string):
                 except IndexError:
                     raise
                 try:
-                    operand = action[operand](operand1, operand2)
+                    operand = ACTION[operand](operand1, operand2)
                 except ZeroDivisionError:
                     raise
                 stack.push(operand)
     return stack.pop()
 
 
-input_string = input()
-res = calculator(input_string)
+input_data = input().split()
+res = calculator(input_data)
 print(int(res))
