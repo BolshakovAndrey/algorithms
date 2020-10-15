@@ -1,3 +1,4 @@
+# номер успешной отправки 36439247
 dataset = [int(a) for a in input().split(' ')]
 k = int(input())
 
