@@ -1,4 +1,4 @@
-"""Номер успешной отправки  37438508 - 21 окт 2020, 15:11:18"""
+"""Номер успешной отправки 37773940 """
 
 
 def upload_photo(servers):
@@ -26,6 +26,7 @@ def data_centers(servers):
     return photos
 
 
-n = int(input())
-arr = [int(a) for a in input().split(' ')]
-print(data_centers(arr))
+if __name__ == "__main__":
+    n = int(input())
+    arr = [int(a) for a in input().split(' ')]
+    print(data_centers(arr))
