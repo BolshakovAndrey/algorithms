@@ -24,14 +24,14 @@ def steps(array):
 
 def zero_i(array, i):
     step = 1
+    res = 0
     # Значение перед i не равно 0?
-    while array[i - step] == 0:
-        step += 1
-    else:
-        if array[i - step] > step:
-            return True
+    while array[i - step]:
+        if array[i - step] >= step:
+            res = True
         else:
-            return False
-
+            res = False
+            step += 1
+    return res
 
 print(steps(arr))
