@@ -1,5 +1,4 @@
 # Номер  успешной отправки - 39300502 - 4 ноя 2020, 22:25:22
-# input
 n = int(input())
 arr = [p for p in input().split(' ')]
 
