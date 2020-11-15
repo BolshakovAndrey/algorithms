@@ -1,3 +1,8 @@
+"""
+Внимание !
+Алгоритм работает, но валится на 31 тесте
+Смотреть L_Лестница_ОК.py
+"""
 # n - количество ступенек
 n = int(input())
 arr = [int(p) for p in input().split(' ')]
@@ -33,5 +38,6 @@ def zero_i(array, i):
             res = False
             step += 1
     return res
+
 
 print(steps(arr))
